@@ -8,7 +8,7 @@ require_once './models/AuthModel.php';
 $auth = new Auth();
 
 // Thiết lập thời gian timeout session (10 phút = 600 giây)
-$timeout = 600;
+$timeout = 6000;
 
 // Chỉ kiểm tra timeout nếu đã đăng nhập
 if (isset($_SESSION['admin_id'])) {

@@ -124,7 +124,7 @@ $listdm = $modelDanhMuc->getAllDanhMuc();
                     if (!$hasActiveBanner):
                         ?>
                         <div class="carousel-item active" style="height: 410px;">
-                            <img class="img-fluid" src="https://simg.zalopay.com.vn/zlp-website/assets/Y6_Banner_Zalo_Pay_4de4797d25.jpg" alt="Default Banner">
+                            <img class="img-fluid" src="https://tse2.mm.bing.net/th/id/OIP.GR5VuA4btEexXcRE27l9agHaEG?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Default Banner">
                             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                                 <div class="p-3" style="max-width: 700px;">
                                     <h4 class="text-light text-uppercase font-weight-medium mb-3">Welcome to Our Store</h4>
