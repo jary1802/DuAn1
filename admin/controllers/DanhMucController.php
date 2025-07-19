@@ -6,7 +6,6 @@ class DanhMucController
 {
     public $modelDanhmuc;
 
-
     public function __construct()
     {
         $this->modelDanhmuc = new DanhMuc();

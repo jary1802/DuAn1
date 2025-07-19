@@ -29,7 +29,7 @@
         <h5 class="mb-0 fw-bold text-primary">Quản Lý Sách</h5>
         <div>
           <a href="?act=form-them-san-pham" class="btn btn-success">
-            <i class="fas fa-plus-circle me-2"></i>Thêm sách mới
+            <i class="fas fa-plus-circle me-2"></i>Thêm Nước hoa mới
           </a>
         </div>
       </div>

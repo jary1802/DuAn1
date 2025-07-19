@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-// dfdsfdsfdsfds
+
 require_once './commons/core.php';
 
 // Tạo đối tượng PDO
@@ -56,7 +56,7 @@ match ($act) {
     'process-checkout' => (new CheckoutController())->processCheckout(),
     'checkout' => (new CheckoutController())->index(),
     'order-success' => (new CheckoutController())->orderSuccess(),
-    'index-momo' => (new CheckoutController())->index(),
+    'index-momo' => (new CheckoutController())->indexMomo(),
     'process-momo-payment' => (new PaymentController())->processMomoPayment(),
 
     // đăng nhập đăng ký
