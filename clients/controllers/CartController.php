@@ -67,7 +67,7 @@ class CartController
           header('Location: ?act=view-shopping-cart');
           exit();
       }
-       // 4. Xóa sản phẩm khỏi giỏ hàng
+    //4. Xóa sản phẩm khỏi giỏ hàng
     public function deleteItem()
     {
         if (!isset($_SESSION['user_id']) || !isset($_GET['id'])) {
@@ -75,16 +75,16 @@ class CartController
             header('Location: ?act=view-shopping-cart');
             return;
         }
-    
+
         $itemId = (int)$_GET['id'];
         $userId = $_SESSION['user_id'];
-    
+
         if ($this->cartModel->removeItem($itemId, $userId)) {
             $_SESSION['message'] = 'Xóa sản phẩm thành công!';
         } else {
             $_SESSION['error'] = 'Không thể xóa sản phẩm!';
         }
-    
+
         header('Location: ?act=view-shopping-cart');
         exit();
     }
