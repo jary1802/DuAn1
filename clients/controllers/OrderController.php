@@ -72,21 +72,7 @@ class OrderController{
             echo "Thiếu tham số để xử lý.";
         }
     }
-    public function huydonhang() {
-        // Kiểm tra nếu có tham số 'act' và giá trị là 'huy-don-hang'
-        if (isset($_GET['act']) && $_GET['act'] === 'huy-don-hang') {
-            if (isset($_GET['order_id'])) {
-                $order_id = $_GET['order_id'];  // Lấy order_id từ URL
-                $status = 'cancelled';  // Trạng thái 'canceled' khi hủy đơn hàng
     
-                $this->updateOrderStatus($order_id, $status);  // Cập nhật trạng thái đơn hàng
-            } else {
-                echo "Thiếu thông tin đơn hàng để hủy.";
-            }
-        } else {
-            echo "Không có hành động hủy đơn hàng hợp lệ.";
-        }
-    }
     
 
     // Phương thức cập nhật trạng thái đơn hàng
@@ -119,7 +105,7 @@ class OrderController{
             echo json_encode(['status' => 'error', 'message' => 'Invalid order ID.']);
             return;
         }
-    
+    // comment
         try {
             // Lấy chi tiết đơn hàng từ model
             $orderDetails = $this->modelOrder->getOrderDetailsThongTin($id);
