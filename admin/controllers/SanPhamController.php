@@ -74,47 +74,7 @@ class SanPhamController
         require_once './views/sanpham/editsp.php';
     }
 
-    public function postEditSanPham()
-    {
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            $comicId = $_POST['id'];
-            $title = $_POST['title'];
-            $author_id = $_POST['author_id'];
-            $category_id = $_POST['category_id'];
-            $description = $_POST['description'];
-            $publication_date = $_POST['publication_date'];
-            $price = $_POST['price'] ?? '';
-            $original_price = $_POST['original_price'] ?? '';
-            $stock_quantity = $_POST['stock_quantity'];
-            $image = $_POST['old_image']; // Keep the old image if not uploading a new one
-
-            // Handle image upload if new image is provided
-            if (isset($_FILES['image']) && $_FILES['image']['error'] === 0) {
-                $uploadDir = '../uploads/product/';
-                $fileName = time() . '_' . basename($_FILES['image']['name']);
-                $uploadFile = $uploadDir . $fileName;
-
-                if (move_uploaded_file($_FILES['image']['tmp_name'], $uploadFile)) {
-                    $image = $uploadFile;
-                } else {
-                    $_SESSION['error'] = "Không thể ti lên ảnh mới.";
-                    header('Location: ?act=san-pham&method=formEditSanPham&id=' . $comicId);
-                    exit();
-                }
-            }
-
-            // Update product
-            if ($this->modelSanPham->updateSanPham($comicId, $title, $author_id, $category_id, $description, $publication_date, $price, $original_price, $stock_quantity, $image)) {
-                $_SESSION['success'] = "Cập nhật sản phẩm thành công!";
-                header('Location: ?act=san-pham');
-                exit();
-            } else {
-                $_SESSION['error'] = "Cập nhật sản phẩm thất bại.";
-                header('Location: ?act=san-pham&method=formEditSanPham&id=' . $comicId);
-                exit();
-            }
-        }
-    }
+   
 
     public function postDeleteSanPham()
     {
