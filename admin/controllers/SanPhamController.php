@@ -13,11 +13,7 @@ class SanPhamController
         $this->modelVariants = new Variant();
     }
 
-    public function danhSachSanPham()
-    {
-        $listsp = $this->modelSanPham->getAllSanPham();
-        require_once "./views/sanpham/listsp.php";
-    }
+    
 
     public function formAddSanPham()
     {
