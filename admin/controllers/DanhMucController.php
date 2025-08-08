@@ -11,17 +11,7 @@ class DanhMucController
         $this->modelDanhmuc = new DanhMuc();
     }
 
-    public function danhSachDanhMuc()
-    {
-        $listDanhMuc = $this->modelDanhmuc->getAllDanhMuc();
-        require_once './views/danhmuc/listdm.php';
-    }
-
-    public function formAddDanhMuc()
-    {
-        require_once './views/danhmuc/adddm.php';
-    }
-
+   
 
     public function postAddDanhMuc()
     {
