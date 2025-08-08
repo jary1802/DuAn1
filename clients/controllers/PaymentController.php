@@ -20,7 +20,7 @@ class PaymentController
 
             $payUrl = MoMoPayment::createPayment($orderId, $amount, $orderInfo, $redirectUrl, $ipnUrl);
 
-            if ($payUrl) {
+              if ($payUrl) {
                 header("Location: $payUrl");
                 exit;
             } else {
