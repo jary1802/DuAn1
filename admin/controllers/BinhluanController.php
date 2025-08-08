@@ -9,7 +9,13 @@ class AdminBinhluanController
         $this->modelbinhluan = new AdminBinhluan();
         $this->modeldanhgia = new AdminBinhluan();
     }
-  
+    public function listBinhluan()
+    {
+        // Lấy tất cả bình luận từ model mà không cần tham số id
+        $comments = $this->modelbinhluan->getAllBinhLuan();  // Hàm này sẽ lấy tất cả bình luận
+        // Truyền dữ liệu sang view
+        require_once './views/binhluan/listbinhluan.php';
+    }
     public function updateTrangThaiBinhLuan()
     {
         $id_binh_luan = $_POST['id_binh_luan'];
