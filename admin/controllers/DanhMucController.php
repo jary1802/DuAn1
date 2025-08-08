@@ -11,25 +11,18 @@ class DanhMucController
         $this->modelDanhmuc = new DanhMuc();
     }
 
-   
-
-    public function postAddDanhMuc()
+    public function danhSachDanhMuc()
     {
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $name = $_POST['name'];
-            $description = $_POST['description'];
-
-            if ($this->modelDanhmuc->insertDanhMuc($name, $description)) {
-                $_SESSION['success'] = "Thêm danh mục thành công!";
-                header('Location: ?act=listdm');
-                exit();
-            } else {
-                // echo 'loi';
-                $_SESSION['error'] = "Có lỗi xảy ra khi thêm danh mục!";
-
-            }
-        }
+        $listDanhMuc = $this->modelDanhmuc->getAllDanhMuc();
+        require_once './views/danhmuc/listdm.php';
     }
+
+    public function formAddDanhMuc()
+    {
+        require_once './views/danhmuc/adddm.php';
+    }
+
+
 
     public function formEditDanhMuc()
     {
