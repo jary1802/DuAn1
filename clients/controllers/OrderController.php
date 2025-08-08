@@ -13,13 +13,7 @@ class OrderController{
         $danhgias=$this->modelOrder->getAllDanhGia();
         require_once 'clients/views/donhang/thongtin.php';
     }
-    public function formchitietdonhang(){
-        $orders_items=$this->modelOrder->getAllOrderItem();
-        // $orders_items=$this->modelOrder->getOrderById('order_id');
-
-        require_once 'clients/views/donhang/chitietdonhang.php';
-        
-    }
+    
     public function addReview() {
         // Kiểm tra phương thức yêu cầu
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
