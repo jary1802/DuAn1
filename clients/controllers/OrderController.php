@@ -109,36 +109,7 @@ class OrderController{
     
 
     // Phương thức hiển thị chi tiết đơn hàng
-    public function getChiTietDonHang() {
-        // Lấy order_id từ URL
-        $id = isset($_GET['order_id']) ? intval($_GET['order_id']) : 0;
     
-        // Kiểm tra xem id có hợp lệ hay không
-        if ($id <= 0) {
-            // Trả về lỗi nếu id không hợp lệ
-            echo json_encode(['status' => 'error', 'message' => 'Invalid order ID.']);
-            return;
-        }
-    
-        try {
-            // Lấy chi tiết đơn hàng từ model
-            $orderDetails = $this->modelOrder->getOrderDetailsThongTin($id);
-            // lấy chi tiết thông tin khách hàng
-            $orderInfo = $this->modelOrder->getOrderThongTinKhachHang($id);
-            
-            // Kiểm tra xem có đơn hàng nào không
-            if ($orderDetails&&$orderInfo) {
-                // Nếu có, chuyển tiếp đến view chi tiết đơn hàng
-                require_once 'clients/views/donhang/chitietdonhang.php';
-            } else {
-                // Nếu không tìm thấy đơn hàng, hiển thị thông báo
-                echo "<div class='alert alert-warning text-center'>Không tìm thấy chi tiết đơn hàng nào.</div>";
-            }
-        } catch (Exception $e) {
-            // Nếu có lỗi xảy ra trong quá trình lấy dữ liệu
-            echo json_encode(['status' => 'error', 'message' => $e->getMessage()]);
-        }
-    }
     
 }
   
