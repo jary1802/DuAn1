@@ -30,7 +30,7 @@ ob_start();
                             class="ti-menu ti-close"></i></a>
                     <a class="navbar-brand" href="http://localhost/Duan1/">
                         <b class="logo-icon p-l-10">
-                            <img src="https://sdmntprwestus2.oaiusercontent.com/files/00000000-6aa4-61f8-ab40-7ea1d2604769/raw?se=2025-07-25T08%3A13%3A08Z&sp=r&sv=2024-08-04&sr=b&scid=82b0f1fe-2924-5670-896f-af033e3e324f&skoid=789f404f-91a9-4b2f-932c-c44965c11d82&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-24T22%3A17%3A11Z&ske=2025-07-25T22%3A17%3A11Z&sks=b&skv=2024-08-04&sig=wDFRbZXs8N1N8EtljEXvzaBqkoDiLswiZfsCbBqLI90%3D" alt="homepage" class="light-logo"
+                            <img src="../uploads/logo/logo1.png" alt="homepage" class="light-logo"
                                 style="width: 170px; height: auto; max-height: 100px;" />
                         </b>
                     </a>
